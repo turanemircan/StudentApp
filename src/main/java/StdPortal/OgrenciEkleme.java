@@ -1,12 +1,15 @@
 package StdPortal;
 
+import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class OgrenciEkleme {
 
-    public static void main(String[] args) {
 
+
+
+   public static void  Ogrenciekleme(){
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the amount of students you're registering");
         int numberOfStudents = input.nextInt();
@@ -70,6 +73,44 @@ public class OgrenciEkleme {
             }
         }
     }
+    /*
+    public    void  ekleme(){
+
+        Student std = new Student();
+
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Öğrenci Adı: ");
+        String ad = scanner.nextLine();
+
+        System.out.print("Öğrenci Soyadı: ");
+        String soyad = scanner.nextLine();
+
+        System.out.print("Öğrenci Yılı (Okula baslama yili): ");
+        int yil = scanner.nextInt();
+
+
+
+        std.getStudentNumber(yilNumaraMap) =  studentNumber(yil);
+
+        ogrenciler.put(ogrenciNo,new HashMap<>());
+
+        ogrenciler.get(ogrenciNo).put(ad,soyad);
+
+        System.out.println("Öğrenci Başarıyla Eklendi");
+
+        System.out.println(ogrenciler);
+
+
+
+    }
+
+
+     */
+
+
+
+
 
 
 }

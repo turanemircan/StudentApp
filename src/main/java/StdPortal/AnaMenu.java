@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class AnaMenu {
 
-    private void anaMenu() {
+    static public void homepage() {
         Scanner scanner=new Scanner(System.in);
         while (true) {
             System.out.println("DEV4-UNIVERSITESINE HOSGELDINIZ\n"
@@ -22,22 +22,22 @@ public class AnaMenu {
 
             switch (menuSecimi) {
                 case "1":
-                   //ogrenci ekleme
+                   OgrenciEkleme.Ogrenciekleme();
                     break;
                 case "2":
-                  //  ogrenciNoAtama();
+                 //OgrenciNoAtama.ogrenciNoAtama();
                     break;
                 case "3":
-                  //  dersKayitMenusu();
+                  Derskayit.derssecme();
                     break;
                 case "4":
-                  //  harcMiktari();
+                  Odeme.harcMiktari();
                     break;
                 case "5":
-                 //   yapilanOdeme();
+                  Odeme.odemeYap();
                     break;
                 case "6":
-                 //   kalanBorc();
+                 Odeme.kalanBorc();
                     break;
                 case "7":
                   //  sonDurum();

@@ -7,6 +7,9 @@ import java.util.TreeMap;
 public class Derskayit {
     public static void dersAdi(){
 
+       // Dersler tarihDersi= new Dersler("Tarih","101",600);
+
+
         TreeMap<String, String> dersvekodu = new TreeMap<>();
         dersvekodu.put("101","Tarih");
         dersvekodu.put("103","Matematik");

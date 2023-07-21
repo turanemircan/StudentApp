@@ -1,2 +1,6 @@
-package StdPortal;public class Dersler {
+package StdPortal;
+
+public class Dersler {
+
 }
+
