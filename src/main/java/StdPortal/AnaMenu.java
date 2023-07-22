@@ -4,9 +4,18 @@ import java.util.Scanner;
 
 public class AnaMenu {
 
-    static public void homepage() {
+    public static void main(String[] args) {
+        homepage();
+    }
+
+    private static void homepage(){
         Scanner scanner=new Scanner(System.in);
-        while (true) {
+        OgrenciEkleme og = new OgrenciEkleme();
+        og.createTable();
+
+        String menuSecimi;
+
+        do {
             System.out.println("DEV4-UNIVERSITESINE HOSGELDINIZ\n"
                     + "*\t*\t* LUTFEN YAPMAK ISTEDIGINIZ ISLEMI SECIN *\t*\t*");
             System.out.println("\t1- Ogrenci Ekle\n"
@@ -18,26 +27,26 @@ public class AnaMenu {
                     + "\t7- Son Durum\n"
                     + "\t8- CIKIS");
 
-            String menuSecimi = scanner.nextLine();
+            menuSecimi = scanner.nextLine();
 
             switch (menuSecimi) {
                 case "1":
-                   OgrenciEkleme.Ogrenciekleme();
+                    og.addStudent();
                     break;
                 case "2":
                  //OgrenciNoAtama.ogrenciNoAtama();
                     break;
                 case "3":
-                  Derskayit.derssecme();
+                  //Derskayit.derssecme();
                     break;
                 case "4":
-                  Odeme.harcMiktari();
+                  //Odeme.harcMiktari();
                     break;
                 case "5":
-                  Odeme.odemeYap();
+                  //Odeme.odemeYap();
                     break;
                 case "6":
-                 Odeme.kalanBorc();
+                 //Odeme.kalanBorc();
                     break;
                 case "7":
                   //  sonDurum();
@@ -45,12 +54,12 @@ public class AnaMenu {
                 case "8":
                  //   cikis();
                     System.out.println("Sistemden Cikiliyor...");
-                    return;
+                    break;
                 default:
                     System.out.println("Hatali tuslama yaptiniz!");
-
+                    break;
             }
-        }
+        } while (!menuSecimi.equals("8"));
     }
 
 }

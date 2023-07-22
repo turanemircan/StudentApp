@@ -1,18 +1,30 @@
 package StdPortal;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Student {
+    private String studentNumber;
     private String name;
     private String surName;
-    private List< Course > selectedLessons=new ArrayList<>();
-    private String studentNumber;
-    private int debt;
-    private String  year;
-    private static int counter =0;
+    private String year;
+    private String selectedLessons;
+    private int debt;//borc
+
 
     public Student() {
+    }
+
+    public Student(String studentNumber, String name, String surName, String year) {
+        this.studentNumber = studentNumber;
+        this.name = name;
+        this.surName = surName;
+        this.year = year;
+    }
+
+    public String getStudentNumber() {
+        return studentNumber;
+    }
+
+    public void setStudentNumber(String studentNumber) {
+        this.studentNumber = studentNumber;
     }
 
     public String getName() {
@@ -31,20 +43,20 @@ public class Student {
         this.surName = surName;
     }
 
-    public List<Course> getSelectedLessons() {
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public String getSelectedLessons() {
         return selectedLessons;
     }
 
-    public void setSelectedLessons(List<Course> selectedLessons) {
+    public void setSelectedLessons(String selectedLessons) {
         this.selectedLessons = selectedLessons;
-    }
-
-    public String getStudentNumber() {
-        return studentNumber;
-    }
-
-    public void setStudentNumber(String studentNumber) {
-        this.studentNumber = studentNumber;
     }
 
     public int getDebt() {
@@ -55,31 +67,15 @@ public class Student {
         this.debt = debt;
     }
 
-    public String getYear() {
-        return year;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
-    }
-
-    public static int getCounter() {
-        return counter;
-    }
-
-    public static void setCounter(int counter) {
-        Student.counter = counter;
-    }
-
     @Override
     public String toString() {
         return "Student{" +
-                "name='" + name + '\'' +
+                "studentNumber='" + studentNumber + '\'' +
+                ", name='" + name + '\'' +
                 ", surName='" + surName + '\'' +
-                ", selectedLessons=" + selectedLessons +
-                ", studentNumber='" + studentNumber + '\'' +
-                ", debt=" + debt +
                 ", year='" + year + '\'' +
+                ", selectedLessons='" + selectedLessons + '\'' +
+                ", debt=" + debt +
                 '}';
     }
 }
